@@ -1,0 +1,26 @@
+﻿@model List<AkademiPlus.EntityLayer.Concrete.Customer>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Müşteri</th>
+            <th>Bakiye</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CustomerID</td>
+                <td>@item.CustomerName</td>
+                <td>@item.CustomerBalance</td>
+            </tr>
+        }
+    </table>
+    <a href="/Default/CustomerAdd/" class="btn btn-outline-primary">Yeni Müşteri</a>
+</div>
